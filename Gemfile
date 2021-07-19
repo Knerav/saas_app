@@ -23,6 +23,10 @@ gem 'jbuilder', '~> 2.5'
 gem 'bootsnap', '>= 1.1.0', require: false
 gem 'milia', '~> 1.2'
 gem 'devise'
+gem "font-awesome-rails"
+gem 'bootstrap', '~> 5.0.1'
+gem 'devise-bootstrap-views', '~> 1.1'
+gem 'jquery-rails'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
