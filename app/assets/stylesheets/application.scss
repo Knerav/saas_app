@@ -1,2 +1,45 @@
 @import "font-awesome";
 @import "bootstrap";
+
+/* Page styling */
+
+#page-content {
+  background-color: rgb(252, 248, 255);
+  flex: 1 0 auto;
+}
+
+html, body {
+  height: 100%;
+}
+
+/* Footer styling */
+
+#sticky-footer {
+  flex-shrink: none;
+}
+
+/* Jumbotron styling */
+
+#jumbotron {
+  background-image: linear-gradient(rgb(255, 136, 0), rgb(240, 136, 0));
+  height: 300px;
+  border-radius: 40px;
+  color: white;
+}
+
+#headline {
+  padding-top: 102px;
+  padding-left: 40px;
+}
+
+#lead {
+  padding-left: 40px;
+}
+
+/* Navbar styling */
+
+#logo-display {
+  height: 35px;
+  width: 35px;
+  margin-right: 15px;
+}
