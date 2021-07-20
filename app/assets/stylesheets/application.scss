@@ -58,7 +58,7 @@ html, body {
   border-radius: 20px;
 }
 
-/* Subscribe card */
+/* Subscribe card & login/signup */
 
 #subscribe-card-layout {
   padding-top: 60px;
@@ -66,5 +66,9 @@ html, body {
 }
 
 #subscribe-card {
+  border-radius: 40px;
+}
+
+#login-signup-card {
   border-radius: 40px;
 }
