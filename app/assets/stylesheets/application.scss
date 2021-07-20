@@ -21,7 +21,7 @@ html, body {
 /* Jumbotron styling */
 
 #jumbotron {
-  background-image: linear-gradient(rgb(255, 136, 0), rgb(240, 136, 0));
+  background-image: linear-gradient(rgb(255, 136, 0), rgb(231, 139, 0));
   height: 300px;
   border-radius: 40px;
   color: white;
@@ -42,4 +42,29 @@ html, body {
   height: 35px;
   width: 35px;
   margin-right: 15px;
+}
+
+/* Button styling */
+
+#button-format-orange {
+  background-image: linear-gradient(rgb(255, 136, 0), rgb(201, 120, 0));
+  color: white;
+  border-radius: 20px;
+}
+
+#button-format-grey {
+  background-image: linear-gradient( grey, rgb(66, 66, 66));
+  color: white;
+  border-radius: 20px;
+}
+
+/* Subscribe card */
+
+#subscribe-card-layout {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+#subscribe-card {
+  border-radius: 40px;
 }

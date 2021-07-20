@@ -1,16 +1,90 @@
 <div class="container">
+
+  <% if current_user %>
+    
+    <div class="row">
+      <div class="col">
+        <div class="display-6"><%= @tenant.name %></div>  
+      </div>
+    </div>
   
-  <div class="row mt-5">
-    <div class="col">
-      <div class="container" id="jumbotron">
-        <div class="display-6" id="headline">
-          <strong>Welcome to TeamingUp</strong>    
-        </div>
-        <div class="lead mt-1" id="lead">
-          The project management app.  
+  <% else %>
+    
+    <div class="row mt-5">
+      <div class="col">
+        <div class="container" id="jumbotron">
+          <div class="display-6" id="headline">
+            <strong>Welcome to TeamingUp</strong>    
+          </div>
+          <div class="lead mt-1" id="lead">
+            The project management app.  
+          </div>
         </div>
       </div>
     </div>
+
+    <div class="row justify-content-center" id="subscribe-card-layout">
+
+    <div class="col-5">
+    
+      <div class="card shadow" id="subscribe-card">
+        <div class="container">
+          <div class="card-body mt-3 mb-3" id="subscribe-card-body">
+            <h3 class="card-title">
+              Starter
+            </h3>
+            <h5 class="card-title mb-4">
+              Free
+            </h5>
+            <div class="card-description">
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">Create one project</li>
+                <li class="list-group-item">Add unlimited artifacts</li>
+                <li class="list-group-item">Add unlimited members</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="card-footer">
+          <div class="container">
+            <%= link_to "Signup", new_user_registration_path, class: "btn mt-1 mb-1", id: "button-format-grey" %>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="col-5">
+      
+      <div class="card shadow" id="subscribe-card">
+        <div class="container">
+          <div class="card-body mt-3 mb-3">
+            <h3 class="card-title">
+              Premium
+            </h3>
+            <h5 class="card-title mb-4">
+              Rs1499/month
+            </h5>
+            <div class="card-description">
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">Create <strong>unlimited</strong> projects</li>
+                <li class="list-group-item">Add unlimited artifacts</li>
+                <li class="list-group-item">Add unlimited members</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="card-footer">
+          <div class="container">
+            <%= link_to "Subscribe", new_user_registration_path, class: "btn mt-1 mb-1", id: "button-format-orange" %>
+          </div>
+        </div>
+      </div>
+    
+    </div>
+
   </div>
+  
+  <% end %>
 
 </div>
