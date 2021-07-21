@@ -1,7 +1,5 @@
 class ConfirmationsController < Milia::ConfirmationsController
-  skip_before_action :authenticate_tenant!
-  before_action      :set_confirmable, :only => [ :update, :show ]
-
+  
   # PUT /resource/confirmation
   # entered ONLY on invite-members usage to set password at time of confirmation
   def update
