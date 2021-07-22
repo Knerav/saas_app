@@ -6,7 +6,7 @@ class HomeController < ApplicationController
       if session[:tenant_id]
         Tenant.set_current_tenant session[:tenant_id]
       else
-        Tenant.set_current_tentnt current_user.tenants.first
+        Tenant.set_current_tenant current_user.tenants.first
       end
 
       @tenant = Tenant.current_tenant
