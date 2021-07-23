@@ -42,6 +42,7 @@ html, body {
   height: 35px;
   width: 35px;
   margin-right: 15px;
+  margin-top: auto;
 }
 
 /* Button styling */
@@ -50,12 +51,22 @@ html, body {
   background-image: linear-gradient(rgb(255, 136, 0), rgb(201, 120, 0));
   color: white;
   border-radius: 20px;
+  border-width: 0;
 }
 
 #button-format-grey {
   background-image: linear-gradient( grey, rgb(66, 66, 66));
   color: white;
   border-radius: 20px;
+  border-width: 0;
+}
+
+#button-format-add-member {
+  background-image: linear-gradient( grey, rgb(66, 66, 66));
+  color: white;
+  border-radius: 20px;
+  margin-right: 15px;
+  border-width: 0;
 }
 
 /* Subscribe card & login/signup */

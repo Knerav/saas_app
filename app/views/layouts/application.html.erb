@@ -2,9 +2,9 @@
 <html>
   <head>
     <title>TeamingUp</title>
+    <%= favicon_link_tag %>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-    <%= favicon_link_tag %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
@@ -13,6 +13,7 @@
   <body class="d-flex flex-column">
     <%= render 'shared/navbar' %>
       <div id="page-content">
+        <%= render 'shared/messages' %>
         <%= yield %>
       </div>
     <%= render 'shared/footer' %>

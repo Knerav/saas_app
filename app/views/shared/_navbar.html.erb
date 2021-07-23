@@ -2,8 +2,8 @@
   <div class="container mt-1 mb-1">
 
     <a class="navbar-brand", href="<%= root_path %>">
-      <%= image_tag("logo.png", class: "d-inline-block align-middle", id: "logo-display") %>
-      <strong>TeamingUp</strong>
+      <%= image_tag("logo.png", class: "d-inline-block align-bottom", id: "logo-display") %>
+      <strong id="logo-text">TeamingUp</strong>
     </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -24,7 +24,7 @@
 
         <ul class="nav navbar-nav navbar-right">
           <li class="nav-item">
-            <%= link_to "<i class='fa fa-users'></i> Add Members".html_safe, new_member_path, class: "btn", id: "button-format-grey" %>
+            <%= link_to "<i class='fa fa-users'></i> Add Members".html_safe, new_member_path, class: "btn", id: "button-format-add-member" %>
           </li>
           <li>
             <%= link_to 'logout', destroy_user_session_path, method: :delete, class: "btn", id: "button-format-orange" %>
