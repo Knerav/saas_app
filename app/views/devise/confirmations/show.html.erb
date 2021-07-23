@@ -1,19 +1,27 @@
-<%= form_for(resource, as: resource_name, url: update_user_confirmation_path(), html: { method: :put }) do |f| %>
-  <%= bootstrap_devise_error_messages! %>
+<div class="container mt-5">
+  <div class="row justify-content-center">
+    <div class="col-6">
+      <div class="card shadow p-5" id="login-signup-card">
+        <%= form_for(resource, as: resource_name, url: update_user_confirmation_path(), html: { method: :put }) do |f| %>
+          <%= bootstrap_devise_error_messages! %>
 
-  <%= hidden_field_tag :confirmation_token, @confirmation_token %>
-  
-  <div class="form-group">
-    <%= f.label :password %>
-    <%= f.password_field :password, autofocus: true, autocomplete: 'password', value: (resource.pending_reconfirmation? ? resource.unconfirmed_email : resource.email), class: 'form-control' %>
-  </div>
+          <%= hidden_field_tag :confirmation_token, @confirmation_token %>
+          
+          <div class="form-group mb-3">
+            <%= f.label :password %>
+            <%= f.password_field :password, autofocus: true, autocomplete: 'password', value: (resource.pending_reconfirmation? ? resource.unconfirmed_email : resource.email), class: 'form-control mt-1' %>
+          </div>
 
-  <div class="form-group">
-    <%= f.label :password_confirmation %>
-    <%= f.password_field :password_confirmation, autofocus: true, autocomplete: 'password', value: (resource.pending_reconfirmation? ? resource.unconfirmed_email : resource.email), class: 'form-control' %>
-  </div>
+          <div class="form-group mb-3">
+            <%= f.label :password_confirmation %>
+            <%= f.password_field :password_confirmation, autofocus: true, autocomplete: 'password', value: (resource.pending_reconfirmation? ? resource.unconfirmed_email : resource.email), class: 'form-control mt-1' %>
+          </div>
 
-  <div class="form-group">
-    <%= f.submit 'Create password', class: 'btn', id: 'button-format-orange' %>
+          <div class="form-group mt-2">
+            <%= f.submit 'Create password', class: 'btn', id: 'button-format-orange' %>
+          </div>
+        <% end %>
+      </div>
+    </div>
   </div>
-<% end %>
+</div>
