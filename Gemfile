@@ -28,6 +28,7 @@ gem 'bootstrap', '~> 5.0.1'
 gem 'devise-bootstrap-views', '~> 1.1'
 gem 'jquery-rails'
 gem 'hirb', '~> 0.7.3'
+gem 'bootstrap-datepicker-rails', '~> 1.9', '>= 1.9.0.1'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]

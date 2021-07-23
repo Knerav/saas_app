@@ -1,0 +1,32 @@
+<p id="notice"><%= notice %></p>
+
+<h3 class="mt-5 mb-4">Projects</h3>
+
+<table class="table table-striped table-hover">
+  <thead>
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">Details</th>
+      <th scope="col">Expected completion date</th>
+      <th scope="col">Tenant</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @projects.each do |project| %>
+      <tr>
+        <td><%= link_to project.name, tenant_project_path(project, tenant_id: @tenant.id) %></td>
+        <td><%= project.details %></td>
+        <td><%= project.expected_completion_date %></td>
+        <td><%= project.tenant %></td>
+        <td><%= link_to 'Edit', edit_tenant_project_path(project, tenant_id: @tenant.id) %></td>
+        <td><%= link_to 'Destroy', tenant_project_path(project, tenant_id: @tenant.id), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Project', new_tenant_project_path(tenant_id: @tenant.id), class: 'btn', id: 'button-format-grey' %>
