@@ -3,13 +3,13 @@
 
     <p id="notice"><%= notice %></p>
     
-    <table>
+    <table class="table table-hover">
       <thead>
         <tr>
           <th>Name</th>
           <th>Key</th>
           <th>Project</th>
-          <th colspan="2">Actions/th>
+          <th colspan="2">Actions</th>
         </tr>
       </thead>
     
@@ -18,9 +18,9 @@
           <tr>
             <td><%= link_to artifact.name, artifact_path(artifact), class: "text-decoration-none" %></td>
             <td><%= s3_link Tenant.current_tenant_id, artifact.key %></td>
-            <td><%= artifact.project %></td>
-            <td><%= link_to 'Show', artifact %></td>
-            <td><%= link_to 'Destroy', artifact, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+            <td><%= artifact.project.name %></td>
+            <td><%= link_to 'Show', artifact, class: "btn btn-sm", id: "button-format-grey" %></td>
+            <td><%= link_to 'Destroy', artifact, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-sm", id: "button-format-grey" %></td>
           </tr>
         <% end %>
       </tbody>

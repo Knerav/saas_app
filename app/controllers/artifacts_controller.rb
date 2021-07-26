@@ -26,7 +26,8 @@ class ArtifactsController < ApplicationController
 
     respond_to do |format|
       if @artifact.save
-        format.html { redirect_to tenant_project_path(tenant_id: Tenant.current_tenant_id, id: @artifact.project_id), notice: "Artifact was successfully created." }
+        format.html { redirect_to tenant_project_path(tenant_id: Tenant.current_tenant_id, id: @artifact.project_id) }
+        flash[:notice] = "Article successfully created"
         format.json { render :show, status: :created, location: @artifact }
       else
         format.html { render :new, status: :unprocessable_entity }

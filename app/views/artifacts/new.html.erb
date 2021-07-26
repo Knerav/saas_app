@@ -1,5 +1,10 @@
-<h1>New Artifact</h1>
-
-<%= render 'form', artifact: @artifact %>
-
-<%= link_to 'Back', artifacts_path %>
+<div class="container mt-5">
+  <div class="row justify-content-center">
+    <div class="col-6">
+      <div class="card shadow p-5" id="login-signup-card">
+        <h1 class="display-6 text-center mb-5">New Artifact</h1>
+        <%= render 'form', artifact: @artifact %>
+      </div>
+    </div>
+  </div>
+</div>
