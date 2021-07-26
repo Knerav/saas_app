@@ -1,7 +1,7 @@
 class Project < ApplicationRecord
   belongs_to :tenant
 
-  validates_uniqueness_of :title
+  validates_uniqueness_of :name
   validate :free_plan_can_only_have_one_project
 
   def free_plan_can_only_have_one_project

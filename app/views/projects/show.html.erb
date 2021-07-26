@@ -1,24 +1,40 @@
-<p id="notice"><%= notice %></p>
+<div class="container mt-5">
+  <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @project.name %>
-</p>
+  <div class="row">
+    <div class="col">
+      
+      <strong class="display-6"><%= @project.name %></strong>
+      <div class="lead mt-3"><%= tenant_name(@project.tenant_id) %></div>
+    
+    </div>
+  </div>
 
-<p>
-  <strong>Details:</strong>
-  <%= @project.details %>
-</p>
+  <div class="row mt-4 mb-4">
+    <div class="col">
+    
+      <table class="table table-striped table-hover">
+        <thead>
+          <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Details</th>
+            <th scope="col">Expected completion date</th>
+          </tr>
+        </thead>
 
-<p>
-  <strong>Expected completion date:</strong>
-  <%= @project.expected_completion_date %>
-</p>
+        <tbody>
+          <tr>
+            <td><%= @project.name %></td>
+            <td><%= @project.details %></td>
+            <td><%= @project.expected_completion_date %></td>
+          </tr>
+        </tbody>
+      </table>
+    
+    </div>
+  </div>
 
-<p>
-  <strong>Tenant:</strong>
-  <%= @project.tenant %>
-</p>
-
-<%= link_to 'Edit', edit_project_path(@project) %> |
-<%= link_to 'Back', projects_path %>
+  <%= link_to 'Delete', tenant_project_path(project: @project, tenant: @project.tenant_id), class: "btn", id: "button-format-red", method: :delete, data: { confirm: 'Are you sure?' } %>
+  <%= link_to 'Edit', edit_tenant_project_path(project: @project, tenant: @project.tenant_id), class: "btn", id: "button-format-grey" %>
+  <%= link_to 'Back', root_path, class: "btn", id: "button-format-grey" %>
+</div>

@@ -69,6 +69,13 @@ html, body {
   border-width: 0;
 }
 
+#button-format-red {
+  background-image: linear-gradient( rgb(228, 0, 0), rgb(161, 0, 0));
+  color: white;
+  border-radius: 20px;
+  border-width: 0;
+}
+
 /* Subscribe card & login/signup */
 
 #subscribe-card-layout {
