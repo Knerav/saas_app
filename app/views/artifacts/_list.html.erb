@@ -1,0 +1,35 @@
+<div class="row">
+  <div class="col">
+
+    <p id="notice"><%= notice %></p>
+    
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Key</th>
+          <th>Project</th>
+          <th colspan="2">Actions/th>
+        </tr>
+      </thead>
+    
+      <tbody>
+        <% artifacts.each do |artifact| %>
+          <tr>
+            <td><%= link_to artifact.name, artifact_path(artifact), class: "text-decoration-none" %></td>
+            <td><%= s3_link Tenant.current_tenant_id, artifact.key %></td>
+            <td><%= artifact.project %></td>
+            <td><%= link_to 'Show', artifact %></td>
+            <td><%= link_to 'Destroy', artifact, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+    
+    <br>
+    
+    <%= link_to 'New Artifact', new_artifact_path(project_id: @project.id), class: "btn", id: "button-format-orange" %>
+  
+
+  </div>
+</div>

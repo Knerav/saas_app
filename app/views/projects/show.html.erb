@@ -34,6 +34,13 @@
     </div>
   </div>
 
+  <div class="row mt-4 mb-4">
+    <div class="col">
+      <div class="lead">Artifacts</div>
+      <%= render "artifacts/list", artifacts: @project.artifacts %>
+    </div>
+  </div>
+
   <%= link_to 'Delete', tenant_project_path(project: @project, tenant: @project.tenant_id), class: "btn", id: "button-format-red", method: :delete, data: { confirm: 'Are you sure?' } %>
   <%= link_to 'Edit', edit_tenant_project_path(project: @project, tenant: @project.tenant_id), class: "btn", id: "button-format-grey" %>
   <%= link_to 'Back', root_path, class: "btn", id: "button-format-grey" %>
