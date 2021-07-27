@@ -1,4 +1,4 @@
-class Plan < ApplicationRecord
+class Plan
   PLANS = [:free, :premium]
 
   def self.options
