@@ -30,6 +30,7 @@ gem 'jquery-rails'
 gem 'hirb', '~> 0.7.3'
 gem 'bootstrap-datepicker-rails', '~> 1.9', '>= 1.9.0.1'
 gem 'aws-sdk', '~> 3.0', '>= 3.0.2'
+gem 'stripe', '~> 5.37'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
