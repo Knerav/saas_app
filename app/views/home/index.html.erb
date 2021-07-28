@@ -37,7 +37,7 @@
         <div class="container">
           <div class="card-body mt-3 mb-3" id="subscribe-card-body">
             <h3 class="card-title">
-              Starter
+              Free
             </h3>
             <h5 class="card-title mb-4">
               Free
@@ -53,7 +53,7 @@
         </div>
         <div class="card-footer">
           <div class="container">
-            <%= link_to "Signup", new_user_registration_path, class: "btn mt-1 mb-1", id: "button-format-grey" %>
+            <%= link_to "Signup", new_user_registration_path(plan: 'free'), class: "btn mt-1 mb-1", id: "button-format-grey" %>
           </div>
         </div>
       </div>
@@ -82,7 +82,7 @@
         </div>
         <div class="card-footer">
           <div class="container">
-            <%= link_to "Subscribe", new_user_registration_path, class: "btn mt-1 mb-1", id: "button-format-orange" %>
+            <%= link_to "Subscribe", new_user_registration_path(plan: 'premium'), class: "btn mt-1 mb-1", id: "button-format-orange" %>
           </div>
         </div>
       </div>

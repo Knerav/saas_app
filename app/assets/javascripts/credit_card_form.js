@@ -13,7 +13,7 @@ function GetURLParameter(sParam) {
   }
 };
 
-$(document).ready(function(){
+$(document).on('ready turbolinks:load', function(){
 
   var show_error, stripeResponseHandler, submitHandler;
 
@@ -30,7 +30,7 @@ $(document).ready(function(){
   };
 
   // Initiate submit handler listner for any form with class cc_form //
-  $('.cc_form').on('submit', submitHandler);
+  $(".cc_form").on('submit', submitHandler);
 
   // handle plan dropdown changing //
   var handlePlanChange = function(plan_type, form) {
