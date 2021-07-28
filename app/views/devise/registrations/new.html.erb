@@ -57,7 +57,7 @@
 
               <div class="form-group col-4 mb-3">
                 <%= p.label :card_cvv, "Card CVV", data: {stripe: 'label'} %>
-                <%= p.text_field :card_cvv, class: "form-control", required: true, data: {stripe: 'cvc'} %>
+                <%= p.text_field :card_cvv, class: "form-control", required: true, data: {stripe: 'cvv'} %>
               </div>
 
             </div>
@@ -89,11 +89,12 @@
         <% end %>
 
         <div class="form-group mb-3">
-          <%= f.submit t('.sign_up'), class: 'btn', id: "button-format-orange" %>
+          <%= button_tag type: :submit, class: "btn", id: "button-format-orange", data: { disable_with: "<i class='fa fa-spinner fa-spin'></i> Submitting" } do %>
+            Signup
+          <% end %>
         </div>
       
       <% end %>
-
       <%= render 'devise/shared/links' %>
       </div>
     

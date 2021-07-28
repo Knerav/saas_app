@@ -41,14 +41,14 @@ $(document).on('ready turbolinks:load', function(){
     } 
 
     if(plan_type === 'premium') {
-      $('[data-stripe]').prop("required", true);
+      $('[data-stripe]').prop('required', true);
       $form.off('submit');
       $form.on('submit', submitHandler);
       $('[data-stripe]').show();
     } else {
       $('[data-stripe]').hide();
       $form.off('submit');
-      $('[data-stripe]').removeProp('required');
+      $('[data-stripe]').prop('required', false);
     }
   };
 

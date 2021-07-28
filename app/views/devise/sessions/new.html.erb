@@ -25,7 +25,9 @@
           <% end %>
 
           <div class="form-group mb-3">
-            <%= f.submit  t('.sign_in'), class: 'btn', id: "button-format-orange" %>
+            <%= button_tag type: :submit, class: "btn", id: "button-format-orange", data: {disable_with: "<i class='fa fa-spinner fa-spin'></i> logging in" } do %>
+							login
+						<% end %>
           </div>
         <% end %>
 
