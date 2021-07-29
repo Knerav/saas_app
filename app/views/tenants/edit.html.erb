@@ -10,9 +10,14 @@
       <div class="card shadow p-5" id="login-signup-card">
         <%= form_for @tenant, url: update_plan_path, html: { class: "#{class_name_for_tenant_form(@tenant)}" } do |f| %>
           
-          <div class="form-group">
+          <div class="form-group mb-3">
             <%= f.label :name, 'Organisation' %>
-            <%= f.text_field :name, required: true, class: "form-control" %>
+            <%= f.text_field :name, required: true, class: "form-control mt-1" %>
+          </div>
+
+          <div class="form-group mb-3">
+            <%= f.label :plan %>
+            <%= f.select :plan, options_for_select(Plan.options, @tenant.plan), {}, required: true, class: "form-control mt-1" %>
           </div>
 
           <% if @tenant.payment.blank? %>
