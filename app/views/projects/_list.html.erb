@@ -27,8 +27,8 @@
               <td><%= project.details %></td>
               <td><%= project.expected_completion_date %></td>
               <td><%= project.tenant.name %></td>
-              <td><%= link_to 'Edit', edit_tenant_project_path(project, tenant_id: @tenant.id), class: "btn btn-sm", id: "button-format-grey" %></td>
-              <td><%= link_to 'Destroy', tenant_project_path(project, tenant_id: @tenant.id), class: "btn btn-sm", id: "button-format-red", method: :delete, data: { confirm: 'Are you sure?' } %></td>
+              <td><%= link_to 'Edit project', edit_tenant_project_path(project, tenant_id: @tenant.id), class: "btn btn-sm", id: "button-format-grey" %></td>
+              <td><%= link_to 'Edit users', users_tenant_project_path(tenant_id: @tenant.id, id: project.id), class: "btn btn-sm", id: "button-format-grey" %></td>
             </tr>
           <% end %>
         </tbody>

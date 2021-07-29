@@ -34,9 +34,10 @@
     </div>
   </div>
 
-  <%= link_to 'Delete', tenant_project_path(project: @project, tenant: @project.tenant_id), class: "btn", id: "button-format-red", method: :delete, data: { confirm: 'Are you sure?' } %>
+  <%= link_to 'Edit project users', users_tenant_project_path(tenant_id: @project.tenant_id, id: @project.id), class: "btn", id: "button-format-orange" %>
   <%= link_to 'Edit', edit_tenant_project_path(project: @project, tenant: @project.tenant_id), class: "btn", id: "button-format-grey" %>
-  <%= link_to 'Back', root_path, class: "btn", id: "button-format-grey" %>
+  <%= link_to 'Back', root_path, class: "btn", id: "button-format-grey" %> |
+  <%= link_to 'Delete', tenant_project_path(project: @project, tenant: @project.tenant_id), class: "btn", id: "button-format-red", method: :delete, data: { confirm: 'Are you sure?' } %>
 
   <div class="container mt-5 mb-5 p-4" id="artifacts-container">
     <div class="row mt-4 mb-4">
