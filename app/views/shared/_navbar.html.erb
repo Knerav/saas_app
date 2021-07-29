@@ -23,14 +23,25 @@
         </ul>
 
         <ul class="nav navbar-nav navbar-right">
-          <li class="nav-item">
-            <%= link_to "<i class='fa fa-users'></i> Add Members".html_safe, new_member_path, class: "btn", id: "button-format-add-member" %>
-          </li>
+          
+          <% if current_user.is_admin? %>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Project functions
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><%= link_to "<i class='fa fa-users'></i> Add members".html_safe, new_member_path, class: "dropdown-item" %></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><%= link_to "<i class='fa fa-briefcase'></i> Edit plan".html_safe, edit_plan_path, class: "dropdown-item" %></li>
+              </ul>
+            </li>
+          <% end %>
+          
           <li>
             <%= link_to 'logout', destroy_user_session_path, method: :delete, class: "btn", id: "button-format-orange" %>
           </li>
         </ul>
-        
+
       </div>
 
     <% else %>
